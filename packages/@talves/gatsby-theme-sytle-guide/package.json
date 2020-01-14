@@ -1,0 +1,24 @@
+{
+  "name": "@talves/gatsby-theme-style-guide",
+  "version": "0.3.0-alpha.0",
+  "main": "index.js",
+  "author": "Tony Alves <tony@3alves.com> (https://www.3alves.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "theme-ui": "^0.3.0-alpha.0",
+    "@theme-ui/mdx": "^0.3.0-alpha.0"
+  },
+  "devDependencies": {
+    "gatsby": "^2.0.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

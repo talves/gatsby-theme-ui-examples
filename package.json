@@ -1,0 +1,12 @@
+{
+  "name": "theme-ui-examples",
+  "private": true,
+  "author": "Tony Alves <tony@3alves.com> (https://www.3alves.com/)",
+  "workspaces": [
+    "www/*",
+    "packages/@talves/*"
+  ],
+  "scripts": {
+    "d": "yarn workspace site-style-guides gatsby develop"
+  }
+}
