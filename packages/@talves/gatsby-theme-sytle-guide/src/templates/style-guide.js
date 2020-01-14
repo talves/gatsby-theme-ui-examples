@@ -6,6 +6,7 @@ import Colors from './colors';
 import StyledComponents from './styled-components';
 import { default as defaultTheme } from '../themes';
 import { GatsbyLinkButton } from '../components/gatsby-link';
+import { PreTheme } from '../components/pre-theme';
 
 export default ({ pageContext, children }) => {
   const { theme = defaultTheme, returnPath } = pageContext || {};
@@ -23,6 +24,7 @@ export default ({ pageContext, children }) => {
         <Colors />
         <Typography />
         <StyledComponents />
+        <PreTheme />
       </Box>
     </ThemeProvider>
   );
