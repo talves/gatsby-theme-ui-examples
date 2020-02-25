@@ -5,8 +5,8 @@
   "author": "Tony Alves <tony@3alves.com> (https://www.3alves.com/)",
   "license": "MIT",
   "dependencies": {
-    "theme-ui": "^0.3.0-alpha.0",
-    "@theme-ui/mdx": "^0.3.0-alpha.0"
+    "theme-ui": "^0.3.1",
+    "@theme-ui/mdx": "^0.3.0"
   },
   "devDependencies": {
     "gatsby": "^2.0.0",

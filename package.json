@@ -7,6 +7,6 @@
     "packages/@talves/*"
   ],
   "scripts": {
-    "d": "yarn workspace site-style-guides gatsby develop"
+    "d": "yarn workspace site gatsby develop"
   }
 }
