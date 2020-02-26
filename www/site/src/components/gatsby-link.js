@@ -48,7 +48,7 @@ const LinkStyle = {
   },
 };
 
-const GatsbyLink = ({ children, ...props }) => (
+export const GatsbyLink = ({ children, ...props }) => (
   <Box as={Link} {...props} sx={ButtonStyle}>
     {children}
   </Box>
