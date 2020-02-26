@@ -17,7 +17,7 @@ export default props => (
         },
         body: {
           margin: 0,
-          padding: 0,
+          padding: 10,
         },
       }}
     />
