@@ -1,0 +1,69 @@
+﻿import Layout from '../layout'
+import {GatsbyLink} from '../components/gatsby-link.js'
+
+export default Layout
+
+<GatsbyLink to={'/'}>⬅ Back</GatsbyLink>
+
+# [01 - Simplified Theme Setup][01]
+
+Create a yarn workspaces monorepo with `/www/*` and `/packages/*` as your workspace directories.
+
+Create the `site` in `/www/site/` and setup your new Gatsby site. Add some simple theme plugins using the packages here.
+
+We setup two themes (`gatsby-theme-a` and `gatsby-theme-b`) and will use a parent theme `gatsby-theme-style-guide` to show the theme each targets.
+
+Here is our `gatsby-config.js` file:
+```js
+module.exports = {
+  plugins: [
+    'gatsby-plugin-mdx',
+    {
+      resolve: '@talves/gatsby-theme-a',
+      options: {
+        name: 'gatsby-theme-a',
+        basePath: '/a',
+        returnPath: '/',
+      },
+    },
+    {
+      resolve: '@talves/gatsby-theme-b',
+      options: {
+        name: 'gatsby-theme-b',
+        basePath: '/b',
+        returnPath: '/',
+      },
+    },
+  ],
+};
+```
+
+Passing the route paths into the themes allows us to pass the options down to the parent theme `@talves/gatsby-theme-style-guide`. Our themes import and pass down their own theme import, but we will be changing that later in our progression of restructuring out theme architecture.
+
+```js
+// gatsby-config.js
+const theme = require('@theme-ui/preset-deep');
+
+module.exports = options => {
+  const {
+    name = '@talves/gatsby-theme-a',
+    returnPath = '/a',
+    basePath = '/a',
+  } = options;
+  return {
+    plugins: [
+      {
+        resolve: `@talves/gatsby-theme-style-guide`,
+        options: {
+          theme,
+          basePath,
+          returnPath,
+        },
+      },
+    ],
+  };
+};
+```
+
+
+[01]: https://github.com/talves/gatsby-theme-ui-examples/tree/01-simplified
