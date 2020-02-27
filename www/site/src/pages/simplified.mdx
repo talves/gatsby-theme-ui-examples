@@ -1,11 +1,18 @@
 ﻿import Layout from '../layout'
-import {GatsbyLink} from '../components/gatsby-link.js'
+import { Box } from 'theme-ui'
+import {GatsbyLink, OutsideLink} from '../components/gatsby-link.js'
 
 export default Layout
 
-<GatsbyLink to={'/'}>⬅ Back</GatsbyLink>
+export const Link01 = "https://github.com/talves/gatsby-theme-ui-examples/tree/01-simplified"
 
-# [01 - Simplified Theme Setup][01]
+<Box><GatsbyLink to={'/'}>⬅ Back</GatsbyLink></Box>
+
+<Box><OutsideLink to={Link01}>01 - Simplified Theme Setup</OutsideLink></Box>
+
+In the simple theme setup we combine our layout at the site level, but there is a missing shared layout. We will address these concerns in future steps of our tutorial example. Most of this code was 
+
+### Setup
 
 Create a yarn workspaces monorepo with `/www/*` and `/packages/*` as your workspace directories.
 
@@ -38,6 +45,8 @@ module.exports = {
 };
 ```
 
+### Paths in the plugins as options
+
 Passing the route paths into the themes allows us to pass the options down to the parent theme `@talves/gatsby-theme-style-guide`. Our themes import and pass down their own theme import, but we will be changing that later in our progression of restructuring out theme architecture.
 
 ```js
@@ -64,6 +73,3 @@ module.exports = options => {
   };
 };
 ```
-
-
-[01]: https://github.com/talves/gatsby-theme-ui-examples/tree/01-simplified

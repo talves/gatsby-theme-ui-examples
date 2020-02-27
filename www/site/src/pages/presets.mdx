@@ -1,0 +1,49 @@
+﻿import Layout from '../layout'
+import {GatsbyLink, OutsideLink} from '../components/gatsby-link.js'
+
+export default Layout
+
+export const Link02 = "https://github.com/talves/gatsby-theme-ui-examples/tree/02-presets"
+export const Microbundler = "https://github.com/developit/microbundle"
+
+<GatsbyLink to={'/'}>⬅ Back</GatsbyLink>
+
+# <OutsideLink to={Link02}>02 - Presets Theme Setup</OutsideLink>
+
+This page and the homepage are now currently using the new theme.
+
+Theme-ui has a presets list of theme tokens you can use out of the box. Those are being used here, but we want to be able to maintain our own list of presets, so we are going to create a presets plugin for Gatsby. This will allow us to reuse them later and also allow us to update the provider theme with a shadowed theme token in the provider plugin that we will setup next.
+
+### Presets plugin
+
+Create a new package called `@talves/gatsby-theme-ui-presets`.
+
+We'll use <OutsideLink sx={{ fontSize: 'inherit' }} to={Microbundler}>microbundle</OutsideLink> to handle the bundling of our theme-ui token presets. Click on the link above or checkout the branch to review the code.
+
+```sh
+yarn workspace @talves/gatsby-theme-ui-presets build
+```
+
+
+
+### Using our new theme preset
+
+Import the theme from the presets for the main theme.
+
+`/src/provider.js`
+```js
+/** @jsx jsx */
+import { jsx, ThemeProvider } from 'theme-ui';
+import { fresher as theme } from '@talves/gatsby-theme-ui-presets';
+import components from './components';
+
+export const wrapRootElement = ({ element }) =>
+  jsx(
+    ThemeProvider,
+    {
+      theme,
+      components,
+    },
+    element,
+  );
+```

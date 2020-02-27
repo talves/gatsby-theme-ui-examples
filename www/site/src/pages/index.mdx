@@ -5,18 +5,28 @@ export default Layout
 
 # Hello
 
-This page is written in <OutsideLink to={'https://theme-ui.now.sh'}>MDX</OutsideLink> and styled with <OutsideLink to={'https://mdxjs.com'}>Theme UI</OutsideLink>.
+This page is written in <OutsideLink sx={{fontSize: '1.25em'}} to={'https://mdxjs.com'}>MDX</OutsideLink> and styled with <OutsideLink sx={{fontSize: '1.25em'}} to={'https://theme-ui.now.sh'}>Theme UI</OutsideLink>. The page is now using the new presets plugin.
 
------------------
+Our next step will to pull the <OutsideLink sx={{fontSize: 'inherit'}} to={'https://theme-ui.now.sh'}>theme-ui</OutsideLink> provider out into it's own theme plugin.
+
+-----------------  
+
+## What will we be doing here?
+
+  * Start with a simplified theme setup
+  * Restructure our theme into basic re-usable theme plugins
+  
+-----------------  
 
 ## Instructions by Branch
 
 
-<GatsbyLink to={'/instructions'}>01 - Simplified</GatsbyLink>
+<GatsbyLink to={'/simplified'}>01 - Simplified</GatsbyLink><br />
+<GatsbyLink to={'/presets'}>02 - Presets</GatsbyLink>
 
 -----------------
 
 ## Themes
 
-<GatsbyLinkButton to={'/a'}>Theme A (deep)</GatsbyLinkButton>
-<GatsbyLinkButton to={'/b'}>Theme B (swiss)</GatsbyLinkButton>
+<GatsbyLinkButton to={'/a'} sx={{ margin: '0.25em 0'}}>Theme A (deep)</GatsbyLinkButton><br />
+<GatsbyLinkButton to={'/b'} sx={{ margin: '0.25em 0'}}>Theme B (swiss)</GatsbyLinkButton>
