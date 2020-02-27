@@ -1,79 +1,102 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Box } from 'theme-ui';
+import { Button } from './button';
 
 const ButtonStyle = {
   '&.active': {
     color: 'muted',
   },
-  lineHeight: [3, 4, 5],
   fontFamily: 'body',
   fontWeight: [200, 300, 400],
   fontSize: [2, 3, 4],
   textDecoration: 'none',
-  padding: '14px',
-  color: 'muted',
+  padding: '0.5rem',
+  mt: '0.5rem',
+  mb: '0.5rem',
+  color: 'background',
   bg: 'text',
-  borderRadius: '8px',
+  borderRadius: [2, 3, 4],
   '&:hover': {
     color: 'text',
-    bg: 'muted',
+    bg: 'background',
     borderStyle: 'solid',
     borderWidth: '2px',
   },
 };
 
-const LinkStyle = {
+const BaseLinkStyle = {
+  fontFamily: 'body',
+  fontWeight: [200, 300, 400],
+  fontSize: [2, 3, 4],
+  textDecoration: 'none',
   padding: 0,
-  '& a': {
-    textDecoration: 'none',
-    color: 'body',
-    display: 'inline-block',
-    position: 'relative',
-    '&:before': {
-      bg: 'red',
-      content: '""',
+  color: 'text',
+  '&:hover': {
+    color: 'secondary',
+    cursor: 'pointer',
+    '&::before': {
+      width: '100%',
       height: '2px',
-      position: 'absolute',
-      bottom: -1,
-      transition: 'width 0.3s ease-in-out',
-      width: '0',
-    },
-    '&:hover': {
-      color: 'black',
-      '&::before': {
-        width: '100%',
-      },
     },
   },
 };
 
-export const GatsbyLink = ({ children, ...props }) => (
-  <Box as={Link} {...props} sx={ButtonStyle}>
+const LinkStyle = {
+  ...BaseLinkStyle,
+  display: 'inline-block',
+  '&:hover': {
+    color: 'text',
+    cursor: 'pointer',
+    '&::before': {
+      width: '100%',
+      height: '2px',
+    },
+  },
+
+  position: 'relative',
+  '&:before': {
+    backgroundColor: 'secondary',
+    content: '""',
+    height: '1px',
+    position: 'absolute',
+    bottom: '-1px',
+    transition: 'width 0.3s ease-in-out',
+    width: '20%',
+  },
+};
+
+export const GatsbyLink = ({ children, sx = {}, ...props }) => (
+  <Box as={Link} {...props} sx={{ ...BaseLinkStyle, ...sx }}>
     {children}
   </Box>
 );
 
-export const OutsideLink = ({ children, to, ...props }) => (
-  <Box as={'span'} sx={LinkStyle}>
-    <Box
-      as={'a'}
-      href={to}
-      target="_blank"
-      rel="noopener noreferrer"
-      {...props}
-    >
-      {children}
-    </Box>
+export const GatsbyPageLink = ({ children, sx = {}, ...props }) => (
+  <Box as={Link} {...props} sx={{ ...LinkStyle, ...sx }}>
+    {children}
   </Box>
 );
 
-export const GatsbyLinkButton = props => {
+export const GatsbyLinkButton = ({ sx = {}, ...props }) => {
   return (
-    <Box sx={{ cursor: 'pointer' }}>
-      <GatsbyLink as={Link} {...props}></GatsbyLink>
-    </Box>
+    <Button
+      as={Link}
+      sx={{ display: 'inline-block', ...sx }}
+      {...props}
+    ></Button>
   );
 };
 
-export default GatsbyLink;
+export const OutsideLink = ({ children, sx = {}, to, ...props }) => (
+  <Box
+    as={'a'}
+    href={to}
+    target="_blank"
+    rel="noopener noreferrer"
+    {...props}
+    sx={{ ...LinkStyle, ...sx }}
+  >
+    {children}
+  </Box>
+);

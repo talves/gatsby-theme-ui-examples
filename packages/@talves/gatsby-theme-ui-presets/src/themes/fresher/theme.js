@@ -1,7 +1,7 @@
-import { colors } from './colors'
-import { colors as darkColors } from './colors-dark'
+import { colors } from './colors';
+import { colors as darkColors } from './colors-dark';
 
-const magma = {
+const pardon = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: 'system-ui, sans-serif',
@@ -52,7 +52,7 @@ const magma = {
       flex: '1 1 auto',
     },
     Nav: {
-      color: 'muted',
+      color: 'navtext',
       bg: 'secondary',
     },
     Container: {
@@ -109,6 +109,7 @@ const magma = {
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
+      marginBottom: '20px',
     },
     a: {
       fontFamily: 'body',
@@ -142,6 +143,6 @@ const magma = {
       maxWidth: '100%',
     },
   },
-}
+};
 
-export default magma
+export default pardon;

@@ -1,0 +1,21 @@
+{
+  "name": "@talves/gatsby-theme-ui-presets",
+  "description": "Gatsby theme presets",
+  "version": "0.0.1",
+  "source": "src/themes/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "umd:main": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "author": "Tony Alves <tony@3alves.com> (https://www.3alves.com/)",
+  "scripts": {
+    "build": "microbundle",
+    "watch": "microbundle --watch"
+  },
+  "devDependencies": {
+    "microbundle": "^0.12.0-next.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
