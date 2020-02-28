@@ -25,9 +25,9 @@ Move `/src/provider.js` to same location in the package.
 
 Create an empty components and default theme export to be able to shadow.
 
-Now we are ready to create a more dynamic `wrapRootElement` in our provider to allow a flag whether to wrap the root element or not. Typically only the site will need to be wrapped. Most plugins will just default to the site provider.
+Once we have this working we are ready to create a more dynamic `wrapRootElement` in our provider to allow a flag whether to wrap the root element or not. Typically only the site will need to be wrapped. Most plugins will just default to the site provider.
 
-### Setting up the provider in the site.
+### Setting up the provider in the site or theme.
 
 ```sh
 yarn add @talves/gatsby-theme-site-provider
@@ -40,10 +40,10 @@ In your theme, import and export the provider exports in src/provider.js.
 export * from '@talves/gatsby-theme-site-provider'
 ```
 
-Wrap our theme in an isolated provider, but make sure we pass along the consumers preference to wrapRootElement with the default provider.
+Wrap our theme in an isolated provider, but make sure we pass along the consumers preference to wrapRootElement with the default provider. Typically this will equate to false, unless our main site is not using the plugin then we can have the theme plugin do it with the setup below.
 
 ```js
-// gatsby-config.js
+// gatsby-config.js in our theme plugin that use the provider plugin.
 module.exports = options => {
   const wrapRootElement = options && options.wrapRootElement;
   return {
