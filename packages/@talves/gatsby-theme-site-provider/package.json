@@ -1,0 +1,16 @@
+{
+  "name": "@talves/gatsby-theme-site-provider",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "@talves/gatsby-theme-plugins",
+  "dependencies": {
+    "@talves/gatsby-theme-ui-presets": "^0.0.1",
+    "theme-ui": "^0.3.1"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.18.17",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "license": "MIT"
+}

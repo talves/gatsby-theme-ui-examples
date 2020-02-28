@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx, Styled } from 'theme-ui';
+import { jsx, Styled } from './provider';
 import { Global } from '@emotion/core';
 
 export default props => (

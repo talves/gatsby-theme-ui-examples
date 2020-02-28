@@ -1,2 +1,2 @@
 // add custom MDX components here
-export default {}
+export default {};
