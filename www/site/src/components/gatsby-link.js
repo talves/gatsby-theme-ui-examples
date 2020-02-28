@@ -3,27 +3,27 @@ import { Link } from 'gatsby';
 import { Box } from '../provider';
 import { Button } from './button';
 
-const ButtonStyle = {
-  '&.active': {
-    color: 'muted',
-  },
-  fontFamily: 'body',
-  fontWeight: [200, 300, 400],
-  fontSize: [2, 3, 4],
-  textDecoration: 'none',
-  padding: '0.5rem',
-  mt: '0.5rem',
-  mb: '0.5rem',
-  color: 'background',
-  bg: 'text',
-  borderRadius: [2, 3, 4],
-  '&:hover': {
-    color: 'text',
-    bg: 'background',
-    borderStyle: 'solid',
-    borderWidth: '2px',
-  },
-};
+// const ButtonStyle = {
+//   '&.active': {
+//     color: 'muted',
+//   },
+//   fontFamily: 'body',
+//   fontWeight: [200, 300, 400],
+//   fontSize: [2, 3, 4],
+//   textDecoration: 'none',
+//   padding: '0.5rem',
+//   mt: '0.5rem',
+//   mb: '0.5rem',
+//   color: 'background',
+//   bg: 'text',
+//   borderRadius: [2, 3, 4],
+//   '&:hover': {
+//     color: 'text',
+//     bg: 'background',
+//     borderStyle: 'solid',
+//     borderWidth: '2px',
+//   },
+// };
 
 const BaseLinkStyle = {
   fontFamily: 'body',

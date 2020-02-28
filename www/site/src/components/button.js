@@ -1,5 +1,4 @@
 ﻿import React from 'react';
-import { Link } from 'gatsby';
 import { Box } from '../provider';
 
 const ButtonBaseStyle = {
