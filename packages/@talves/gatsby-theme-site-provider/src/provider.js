@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, ThemeProvider } from 'theme-ui';
-import { fresher as theme } from '@talves/gatsby-theme-ui-presets';
+import theme from './themes';
 import components from './components';
 
 export const wrapRootElement = ({ element }) =>
