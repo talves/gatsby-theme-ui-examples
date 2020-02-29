@@ -6,6 +6,10 @@ module.exports = {
       options: { wrapRootElement: true },
     },
     {
+      resolve: `@talves/gatsby-theme-test`,
+      options: { wrapRootElement: false },
+    },
+    {
       resolve: '@talves/gatsby-theme-a',
       options: {
         name: 'gatsby-theme-a',

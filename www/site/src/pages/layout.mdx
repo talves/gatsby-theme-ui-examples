@@ -3,13 +3,13 @@ import {GatsbyLink, OutsideLink} from '../components/gatsby-link.js'
 
 export default Layout
 
-export const Link04 = "https://github.com/talves/gatsby-theme-ui-examples/tree/02-layout"
+export const Link04 = "https://github.com/talves/gatsby-theme-ui-examples/tree/04-layout"
 
 <GatsbyLink to={'/'}>⬅ Back</GatsbyLink>
 
 # <OutsideLink to={Link04}>04 - Page Layout Theme Plugin</OutsideLink>
 
-The site layout plugin here is a shell to be used by other themes. The site will shadow a Layout component to be used to wrap all pages. This allows for consistent composition of the page components and will not get in the way of theming a page. Taken and inspired originally by the <OutsideLink sx={{ fontSize: '1.25em' }} to={Link04}>theme-ui</OutsideLink> plugin.
+The site layout plugin here is a shell to be used by other themes. The site will shadow a Layout component to be used to wrap all pages. This allows for consistent composition of the page components and will not get in the way of theming a page. Taken and inspired originally by the `theme-ui` plugin.
 
 Attribution: theme-ui/packages/gatsby-theme-ui-layout
 
@@ -44,3 +44,43 @@ export default props =>
 ```
 
 End-users of a theme that is built with `gatsby-theme-ui-layout` can shadow the same Layout component to customize the page layout.
+
+### Our test theme plugin using the layout
+
+We are going to create a plugin for testing (`@talves/gatsby-theme-test`) the layout plugin shadowing.
+
+The test plugin will also be using the `@talves/gatsby-theme-site-provider`. 
+See `gatsby-config.js`:
+```js
+module.exports = options => {
+  const wrapRootElement = options && options.wrapRootElement;
+  return {
+    plugins: [
+      `gatsby-plugin-mdx`,
+      `@talves/gatsby-theme-site-layout`,
+      {
+        resolve: `@talves/gatsby-theme-site-provider`,
+        options: {
+          wrapRootElement,
+        },
+      },
+    ],
+  };
+};
+```
+
+Add the theme into our main site and setup the `gatsby-config.js` to use it.
+
+```js
+// www/site/gatsby-config.js
+module.exports = {
+  plugins: [
+    ...
+    {
+      resolve: `@talves/gatsby-theme-test`,
+      options: { wrapRootElement: false },
+    },
+    ...
+  ]
+}
+```

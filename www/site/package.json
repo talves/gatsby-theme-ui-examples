@@ -17,6 +17,7 @@
     "@talves/gatsby-theme-b": "^0.0.1",
     "@talves/gatsby-theme-site-layout": "^0.0.1",
     "@talves/gatsby-theme-site-provider": "^0.0.1",
+    "@talves/gatsby-theme-test": "^0.0.1",
     "@talves/gatsby-theme-ui-presets": "^0.0.1",
     "@emotion/core": "^10.0.27",
     "gatsby": "^2.18.7",
