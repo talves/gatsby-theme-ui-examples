@@ -35,7 +35,7 @@ LICENSE: [MIT][MIT]
 
 [MIT]: https://github.com/talves/gatsby-theme-ui-examples/blob/master/LICENSE
 
-[Simplified]: https://github.com/talves/gatsby-theme-ui-examples/tree/02-simplified
+[Simplified]: https://github.com/talves/gatsby-theme-ui-examples/tree/01-simplified
 [Presets]: https://github.com/talves/gatsby-theme-ui-examples/tree/02-presets
 [Provider]: https://github.com/talves/gatsby-theme-ui-examples/tree/03-provider
 [Layout]: https://github.com/talves/gatsby-theme-ui-examples/tree/04-layout
