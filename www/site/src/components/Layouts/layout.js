@@ -3,10 +3,11 @@ import { Global } from '@emotion/core';
 import { Box, useThemeUI } from '../../provider';
 import { FlexLayout, Header, Main, Container } from './wrappers';
 import ThemeSwitcher from '../ThemeSwitcher';
+import { GatsbyLink } from '../gatsby-link.js';
 
-export const Layout = ({ children, header = 'Header' }) => {
+export const Layout = ({ location, children, header = 'Header' }) => {
   const { theme } = useThemeUI();
-
+  console.log(location);
   return (
     <FlexLayout variant="styles.root">
       <Global
@@ -39,6 +40,9 @@ export const Layout = ({ children, header = 'Header' }) => {
         </Box>
       </Header>
       <Main variant="styles.Layout">
+        {location && location.pathname !== '/' && (
+          <GatsbyLink to={'/'}>⬅ Back</GatsbyLink>
+        )}
         <Container>
           <Box
             sx={{
