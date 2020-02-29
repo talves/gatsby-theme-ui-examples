@@ -15,6 +15,7 @@
     "@mdx-js/react": "^1.5.3",
     "@talves/gatsby-theme-a": "^0.0.1",
     "@talves/gatsby-theme-b": "^0.0.1",
+    "@talves/gatsby-theme-components-core": "^0.0.1",
     "@talves/gatsby-theme-site-layout": "^0.0.1",
     "@talves/gatsby-theme-site-provider": "^0.0.1",
     "@talves/gatsby-theme-test": "^0.0.1",
