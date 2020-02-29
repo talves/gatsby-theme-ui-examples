@@ -21,11 +21,11 @@ There are some pre tags that will show you the state of master prior to the bran
 
 Each branch has the final stage of the progressive changes into master. Just checkout a branch and you can review/develop in that branch to play around. The repository is self documenting, so you can also link to the branch within github without a checkout to see the code at each branch.
 
-    - [01 - Simplified][Simplified]
-    - [02 - Presets][Presets]
-    - [03 - Provider][Provider]
-    - [04 - Layout][Layout]
-    - [05 - Components][Components]
+  - [01 - Simplified][Simplified]
+  - [02 - Presets][Presets]
+  - [03 - Provider][Provider]
+  - [04 - Layout][Layout]
+  - [05 - Components][Components]
 
 -------------------------
 
