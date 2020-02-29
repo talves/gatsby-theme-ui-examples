@@ -1,0 +1,91 @@
+﻿import { Layout } from '../components/Layouts'
+import {OutsideLink} from '../components/gatsby-link.js'
+
+export default Layout
+
+export const Link04 = "https://github.com/talves/gatsby-theme-ui-examples/tree/04-layout"
+
+# <OutsideLink to={Link04}>04 - Page Layout Theme Plugin</OutsideLink>
+
+The site layout plugin here is a shell to be used by other themes. The site will shadow a Layout component to be used to wrap all pages. This allows for consistent composition of the page components and will not get in the way of theming a page. Taken and inspired originally by the `theme-ui` plugin.
+
+Attribution: theme-ui/packages/gatsby-theme-ui-layout
+
+### The site theme layout plugin
+
+Create a new package called `@talves/gatsby-theme-site-layout`.
+
+
+### Shadowing your layout to the plugin from your Gatsby site
+
+We will showdow the exports of out layout component to a named export (`Layout`). The `Layout` component will be imported by the themes for use to wrap pages. If the component is not shadowed, it will just use the default empty component wrapper.
+
+Shadowing the component is as easy as creating the file in the path below. This is just an example layout, but gives you a solid idea of how this is accomplished.
+
+```js
+// src/@talves/gatsby-theme-site-layout/layout.js
+export { Layout } from '../../components/Layouts';
+```
+
+### Setting up the layout plugin in your theme
+
+In your theme, import and use the Layout component, which does not include any default layout.
+
+```jsx
+// example page template
+import { Layout } from '@talves/gatsby-theme-site-layout'
+
+export default props =>
+  <Layout {...props}>
+    {/* your theme content goes here */}
+  </Layout>
+```
+
+End-users of a theme that is built with `gatsby-theme-ui-layout` can shadow the same Layout component to customize the page layout.
+
+### Our test theme plugin using the layout
+
+We are going to create a plugin for testing (`@talves/gatsby-theme-test`) the layout plugin shadowing.
+
+The test plugin will also be using the `@talves/gatsby-theme-site-provider`. 
+See `gatsby-config.js`:
+```js
+module.exports = options => {
+  const wrapRootElement = options && options.wrapRootElement;
+  return {
+    plugins: [
+      `gatsby-plugin-mdx`,
+      `@talves/gatsby-theme-site-layout`,
+      {
+        resolve: `@talves/gatsby-theme-site-provider`,
+        options: {
+          wrapRootElement,
+        },
+      },
+    ],
+  };
+};
+```
+
+Add the theme into our main site and setup the `gatsby-config.js` to use it.
+
+```js
+// www/site/gatsby-config.js
+module.exports = {
+  plugins: [
+    ...
+    {
+      resolve: `@talves/gatsby-theme-test`,
+      options: { wrapRootElement: false },
+    },
+    ...
+  ]
+}
+```
+
+We now have a test page setup, so the next step is to shadow the Layout to use the sites layout. Add the shadow component to the path in our site:
+
+```js
+// src/@talves/gatsby-theme-site-layout/layout.js
+export { Layout } from '../../components/Layouts';
+```
