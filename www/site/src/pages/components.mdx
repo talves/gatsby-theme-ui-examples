@@ -24,6 +24,22 @@ Add and import the components plugin into the site. Change all imports to use th
 
 Let's add our new components to our test page theme (`@talves/gatsby-theme-test`).
 
+Add `@talves/gatsby-theme-components-core` to the dependencies in the `package.json`
+
+```js
+ module.exports = {
+  plugins: [
+    ...
+   {
+      resolve: `@talves/gatsby-theme-components-core`,
+      options: { wrapRootElement: false },
+    },
+    ...
+  ],
+};
+
+```
+
 
 
 

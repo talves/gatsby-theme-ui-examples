@@ -7,6 +7,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.3",
     "@mdx-js/react": "^1.5.3",
+    "@talves/gatsby-theme-components-core": "^0.0.1",
     "@talves/gatsby-theme-site-layout": "^0.0.1",
     "@talves/gatsby-theme-site-provider": "^0.0.1",
     "@theme-ui/mdx": "^0.3.0",

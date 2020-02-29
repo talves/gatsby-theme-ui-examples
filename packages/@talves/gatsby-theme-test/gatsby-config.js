@@ -10,6 +10,10 @@
           wrapRootElement,
         },
       },
+      {
+        resolve: `@talves/gatsby-theme-components-core`,
+        options: { wrapRootElement: false },
+      },
     ],
   };
 };
