@@ -84,3 +84,10 @@ module.exports = {
   ]
 }
 ```
+
+We now have a test page setup, so the next step is to shadow the Layout to use the sites layout. Add the shadow component to the path in our site:
+
+```js
+// src/@talves/gatsby-theme-site-layout/layout.js
+export { Layout } from '../../components/Layouts';
+```
