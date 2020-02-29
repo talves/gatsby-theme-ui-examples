@@ -21,10 +21,11 @@ There are some pre tags that will show you the state of master prior to the bran
 
 Each branch has the final stage of the progressive changes into master. Just checkout a branch and you can review/develop in that branch to play around. The repository is self documenting, so you can also link to the branch within github without a checkout to see the code at each branch.
 
-    - 01 - Simplified
-    - 02 - Presets
-    - 03 - Provider
-    - 04 - Layout
+    - [01 - Simplified][Simplified]
+    - [02 - Presets][Presets]
+    - [03 - Provider][Provider]
+    - [04 - Layout][Layout]
+    - [05 - Components][Components]
 
 -------------------------
 
@@ -33,3 +34,9 @@ Each branch has the final stage of the progressive changes into master. Just che
 LICENSE: [MIT][MIT]
 
 [MIT]: https://github.com/talves/gatsby-theme-ui-examples/blob/master/LICENSE
+
+[Simplified]: https://github.com/talves/gatsby-theme-ui-examples/tree/02-simplified
+[Presets]: https://github.com/talves/gatsby-theme-ui-examples/tree/02-presets
+[Provider]: https://github.com/talves/gatsby-theme-ui-examples/tree/03-provider
+[Layout]: https://github.com/talves/gatsby-theme-ui-examples/tree/04-layout
+[Components]: https://github.com/talves/gatsby-theme-ui-examples/tree/05-components
