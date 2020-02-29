@@ -1,20 +1,15 @@
 {
-  "name": "@talves/gatsby-theme-test",
+  "name": "@talves/gatsby-theme-components-core",
+  "description": "Gatsby theme components using theme ui",
   "version": "0.0.1",
   "main": "index.js",
   "author": "Tony Alves <tony@3alves.com> (https://www.3alves.com/)",
-  "license": "MIT",
   "dependencies": {
-    "@mdx-js/mdx": "^1.5.3",
-    "@mdx-js/react": "^1.5.3",
-    "@talves/gatsby-theme-components-core": "^0.0.1",
-    "@talves/gatsby-theme-site-layout": "^0.0.1",
     "@talves/gatsby-theme-site-provider": "^0.0.1",
-    "@theme-ui/mdx": "^0.3.0",
-    "gatsby-plugin-mdx": "^1.0.64",
+    "react-use": "^13.9.0",
     "theme-ui": "^0.3.1"
   },
- "devDependencies": {
+  "devDependencies": {
     "gatsby": "^2.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"

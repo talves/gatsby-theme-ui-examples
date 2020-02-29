@@ -1,0 +1,49 @@
+﻿import { Layout } from '../components/Layouts'
+import {OutsideLink} from '@talves/gatsby-theme-components-core'
+
+export default Layout
+
+export const Link05 = "https://github.com/talves/gatsby-theme-ui-examples/tree/05-components"
+
+# <OutsideLink to={Link05}>05 - Components Theme Plugin</OutsideLink>
+
+What we want to do is be able to import common components from a plugin into out site and themes and not have to duplicate that work. We create a theme (`@talves/gatsby-theme-components-core`) to hold our components and use our provider plugin for theming.
+
+### The components theme plugin
+
+Create a new package called `@talves/gatsby-theme-components-core`.
+
+Add the theme provider plugin (`@talves/gatsby-theme-site-provider`) to our components plugin. Setup a `src/provider.js` file to export the provider from the plugin. Now our components and site will be using the same provider.
+
+Move our components we want to re-use into the theme plugin.
+
+Add and import the components plugin into the site. Change all imports to use the plugin in the site.
+
+
+### Adding to a theme plugin
+
+Let's add our new components to our test page theme (`@talves/gatsby-theme-test`).
+
+Add `@talves/gatsby-theme-components-core` to the dependencies in the `package.json`
+
+```js
+ module.exports = {
+  plugins: [
+    ...
+   {
+      resolve: `@talves/gatsby-theme-components-core`,
+      options: { wrapRootElement: false },
+    },
+    ...
+  ],
+};
+
+```
+
+
+
+
+
+-----------------
+
+**_Note:_** Although this did not change our site. We have a reuseable components plugin tied to our theme provider that can be used by our themes and by our site to create a common look and feel for our site.

@@ -1,5 +1,5 @@
 import { Layout } from '../components/Layouts'
-import {GatsbyLinkButton, GatsbyLink, OutsideLink} from '../components/gatsby-link.js'
+import {GatsbyLinkButton, GatsbyLink, OutsideLink} from '@talves/gatsby-theme-components-core'
 
 export default Layout
 
@@ -13,6 +13,7 @@ The site is now using a provider plugin.
 
 The site is now using a layout plugin and we added a test page plugin to see how to use the provider plugin. This also shows how we can shadow our layout from the site and all plugins end up using it.
 
+The site is now using a components plugin for our common core theme components.
 
 -----------------  
 
@@ -29,7 +30,8 @@ The site is now using a layout plugin and we added a test page plugin to see how
 <GatsbyLink to={'/simplified'}>01 - Simplified</GatsbyLink><br />
 <GatsbyLink to={'/presets'}>02 - Presets</GatsbyLink><br />
 <GatsbyLink to={'/provider'}>03 - Provider</GatsbyLink><br />
-<GatsbyLink to={'/layout'}>04 - Layout</GatsbyLink>
+<GatsbyLink to={'/layout'}>04 - Layout</GatsbyLink><br />
+<GatsbyLink to={'/components'}>05 - Components</GatsbyLink>
 
 -----------------
 

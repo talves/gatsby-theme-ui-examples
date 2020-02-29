@@ -1,9 +1,9 @@
 import React from 'react';
 import { Global } from '@emotion/core';
+import { GatsbyLink } from '@talves/gatsby-theme-components-core';
 import { Box, useThemeUI } from '../../provider';
 import { FlexLayout, Header, Main, Container } from './wrappers';
 import ThemeSwitcher from '../ThemeSwitcher';
-import { GatsbyLink } from '../gatsby-link.js';
 
 export const Layout = ({ location, children, header = 'Header' }) => {
   const { theme } = useThemeUI();

@@ -14,12 +14,17 @@ This repository is **NOT** trying to solve all the things. It is taking the idea
 
 There are some pre tags that will show you the state of master prior to the branch merge. (pre-01, pre-02, etc)
 
-**_Reminder:_** You can do a git checkout of a tag, although this puts your repository in “detached HEAD” state, which has some ill side effects if you try to make changes.
+**_Reminder:_** You can do a git checkout of a tag, although this puts your repository in “detached HEAD” state, which has some ill side effects if you try to make changes. I would only do this for code review.
 
 
 ## Branches
 
-    - 
+Each branch has the final stage of the progressive changes into master. Just checkout a branch and you can review/develop in that branch to play around. The repository is self documenting, so you can also link to the branch within github without a checkout to see the code at each branch.
+
+    - 01 - Simplified
+    - 02 - Presets
+    - 03 - Provider
+    - 04 - Layout
 
 -------------------------
 

@@ -2,6 +2,10 @@ module.exports = {
   plugins: [
     'gatsby-plugin-mdx',
     {
+      resolve: `@talves/gatsby-theme-components-core`,
+      options: { wrapRootElement: false },
+    },
+    {
       resolve: `@talves/gatsby-theme-site-provider`,
       options: { wrapRootElement: true },
     },
