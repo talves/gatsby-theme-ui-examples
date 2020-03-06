@@ -1,7 +1,7 @@
-import React from 'react';
-import { jsx, InitializeColorMode } from 'theme-ui';
-
 import Wrapper from './src/wrap-root-element';
+import { onRenderBody } from './src/on-render-body';
+
+export { onRenderBody };
 
 export const wrapRootElement = (props, options) => {
   const noRootElement = options && !Boolean(options.wrapRootElement);
@@ -11,10 +11,4 @@ export const wrapRootElement = (props, options) => {
     every theme provider because the closest provider in the tree will be used.
   */
   return <Wrapper {...props} />;
-};
-
-export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([
-    jsx(InitializeColorMode, { key: 'theme-ui-no-flash' }),
-  ]);
 };
